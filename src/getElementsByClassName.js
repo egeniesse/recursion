@@ -23,16 +23,15 @@ var getElementsByClassName = function(className){
 				});
 			}
 
-			if (children){ // Determines if the selected element has any classArr.
+			if (children){ // Determines if the selected element has any children.
 
 				_.each(children, function(element){ //recursively calls walkTheDom on each child
 					walkTheDom(element, className)
-				});
-				
+				});		
 			}	
 	};
 
-	walkTheDom(document.body, className); 
+	walkTheDom(document.body, className); // Starts looking for in the body element.
 	
 	return passingElements;
   
